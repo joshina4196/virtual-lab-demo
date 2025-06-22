@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Website</title>
+  <style type="text/css">
+    * {
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      background: crimson;
+      font-family: Calibri, sans-serif;
+      padding: 15px;
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo a {
+      font-size: 35px;
+      font-weight: 600;
+      color: white;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      margin-left: 20px;
+    }
+
+    li a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    
+
+    .form-container {
+      margin: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    input[type="text"], input[type="password"] {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      padding: 5px;
+      width: 300px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+   
+  <nav class="navbar">
+    <div class="navdiv">
+    <div class="logo"><a href="#">Coding</a></div>
+    <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About us</a></li>   <li><a href="#">Services</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+  </nav>
+
+   
+  <div class="form-container">
+   <img src="" alt="There is no image"><br><br>
+
+    <form onsubmit="return validateForm()" action="abc.html">
+      User ID: <input type="text" id="n1"><br>
+      Contact: <input type="text" id="n2"><br>
+      Password: <input type="password" id="n3"><br>
+      Confirm Password: <input type="password" id="n4"><br>
+      <input type="submit" value="Submit Your Data">
+    </form>
+  </div>
+
+  
+  <script>
+    function validateForm() {
+      var a = document.getElementById("n1").value;
+      var b = document.getElementById("n2").value;
+      var c = document.getElementById("n3").value;
+      var d = document.getElementById("n4").value;
+
+      if (a === "" || b === "" || c === "" || d === "") {
+       alert("All fields are mandatory");
+        return false;
+      } else if (b.length !== 11) {
+        alert("Contact number should be exactly 11 digits.");
+        return false;
+      } 
+     else if (c !== d) {
+        alert("Passwords do not match.");	
+        return false;
+      }
+else if (is not a number(b)) {
+        alert("Only numbers are allowed.");
+        return false;
+      }
+else
+{
+      return true;
+    }
+  </script>
+
+</body>
+</html>
